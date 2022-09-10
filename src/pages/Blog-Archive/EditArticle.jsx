@@ -26,7 +26,7 @@ export const EditArticle=()=>{
 
   useEffect(()=>{
     loadArticleDetails();
-  }, [])
+  },[])
 
   const loadArticleDetails = async () =>{
     const response = await getArticleToEdit(id);
@@ -45,7 +45,7 @@ const onValueChange =(e)=>{
 
 const editArticleDetail= async ()=>{
  await editArticle(article,id);
- navigate("/BlogArchive");
+ navigate("/all");
 }
 
     return (<>

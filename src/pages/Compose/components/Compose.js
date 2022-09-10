@@ -34,7 +34,7 @@ const onValueChange =(e)=>{
 
 const addArticleDetail= async ()=>{
  await addArticle(article);
- navigate("/BlogArchive");
+ navigate("/all");
 }
 
 

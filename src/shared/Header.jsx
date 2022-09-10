@@ -1,33 +1,59 @@
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-function Header() {
+
+
+import {NavLink} from 'react-router-dom';
+import styled from '@emotion/styled';
+import { AppBar, Toolbar, Typography } from '@mui/material';
+
+const Header = styled(AppBar)`
+Background:Black;
+position:fixed;
+`
+const Tabs = styled(NavLink)`
+fonst-size: 20px;
+margin-right: 20px;
+color: white;
+`
+
+
+function Navbar(){
   return (
      
-    <Navbar fixed="top" bg="light" expand="lg">
-      <Container>
-        <Navbar.Brand href="/">Traveler</Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-          <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="/Contact">Contact</Nav.Link>
-            <Nav.Link href="/Compose">Compose</Nav.Link>
-            <NavDropdown title="Blog" id="basic-nav-dropdown">
-              <NavDropdown.Item href="/BlogArchive">Blog Archive</NavDropdown.Item>
-              
-            </NavDropdown>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
+<Header>
+  <Toolbar>
+<Tabs to="/">Traveler</Tabs>
+<Tabs to="/">Home</Tabs>
+<Tabs to="/Contact">Conatct</Tabs>
+<Tabs to="/add">Compose</Tabs>
+<Tabs to="/all">Blog Archive</Tabs>
+
+  </Toolbar>
+</Header>
+
+
+
+//     <Navbar fixed="top" bg="light" expand="lg">
+//       <Container>
+//         <NavLink to="/">Traveler</NavLink>
+//         <Navbar.Toggle aria-controls="basic-navbar-nav" />
+//         <Navbar.Collapse id="basic-navbar-nav"> 
+//           <Nav className="me-auto">
+//           <NavLink to="/">Home</NavLink>
+//             <NavLink to="/Contact">Contact</NavLink>
+//             <NavLink to="/add">Compose</NavLink>
+//               <NavLink to="/all">Blog Archive</NavLink>
+//               </Nav>
+        
+        
+//         </Navbar.Collapse> 
+//       </Container>
 
 
      
- </Navbar>
+//  </Navbar>
  
  
   );
 }
 
-export default Header;
+export default Navbar;

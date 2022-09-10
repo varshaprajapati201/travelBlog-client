@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const URL="http://localhost:3000";
+const URL="https://travelblog150.herokuapp.com";
 
 export const addArticle= async (data)=>{
     try{

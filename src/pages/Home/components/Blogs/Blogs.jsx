@@ -1,6 +1,7 @@
 import Col from "react-bootstrap/esm/Col";
 
 import Row from "react-bootstrap/esm/Row";
+import { NavLink } from "react-router-dom";
 
 
 export const BlogSection=()=>{
@@ -24,11 +25,11 @@ The opportunity to tell enriching stories and have something to laugh about for 
 Maybe it’s something more you want to escape to – a road trip in the USA, or across Australia, a trek to Machu Picchu, teaching English in Asia, or a gap year that turns into three – like mine did.</p>
 <br></br>
 
-<a class="blog-archive-anchor" href="/BlogArchive">Blog Archive</a>
+<NavLink className={"blog-archive-anchor"} to="/all">Blog Archive</NavLink>
 
 </div>
 </Col>
-
+{/* class="blog-archive-anchor" */}
 
 </Row>
  
